@@ -1,0 +1,41 @@
+<!DOCTYPE html> <!--TODO - Rolling Animation when selecting. -> Minimum 2 spillere pr gruppe -> Add All / Remove All pr cup is broken - Example - Rainbow Road is triggered for all-->
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MarioKart Tournament</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>MarioKart Tournament</h1>
+
+  <div id="playerInput">
+    <h2>Add Players</h2>
+    <input type="text" id="playerName" placeholder="Playername" />
+    <button onclick="addPlayer()">Add</button>
+    <button onclick="resetTournament()">Delete Tournament</button>
+    <div class="player-list" id="playerList"></div>
+  </div>
+
+  <label for="consoleCount">Number of Consoles:</label>
+  <input type="number" id="consoleCount" value="1" min="1" max="20" style="width: 50px;" />
+
+  <div id="drawModeSelector">
+  </div>
+  <button onclick="generateGroups()">Draw Next Round</button>
+
+  <div id="trackPreview">
+    <details id="trackSection" open>
+    <summary id="trackHeader">Available Courses</summary>
+    <div id="trackList"></div>
+    </details>
+  </div>
+
+  <div id="groups"></div>
+  <button onclick="generateGroups()">Draw Next Round</button>
+  <div id="leaderboard"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
